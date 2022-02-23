@@ -38,13 +38,17 @@ b {
 .landing {
   margin: 5%;
   background-color: #faf9f9; }
+  @media (max-width: 1200px) {
+    .landing {
+      margin: 0; } }
   .landing header {
     display: flex;
     justify-content: space-between;
     padding: 1%; }
     .landing header .logo {
       width: 3rem;
-      height: 3rem; }
+      height: 3rem;
+      cursor: pointer; }
     .landing header .search-box {
       display: flex;
       align-items: center; }
@@ -56,39 +60,71 @@ b {
         opacity: 0.7;
         width: 30rem; }
       .landing header .search-box ion-icon {
-        margin-left: -10%; }
+        margin-left: -10%;
+        cursor: pointer; }
     .landing header .rightnav {
       display: flex;
       align-items: center;
       gap: 20%; }
       .landing header .rightnav ion-icon {
-        font-size: 3rem; }
+        font-size: 3rem;
+        cursor: pointer; }
       .landing header .rightnav__profile {
         display: flex;
         align-items: center;
         gap: 5%; }
         .landing header .rightnav__profile img {
           width: 40%;
-          border-radius: 50%; }
+          border-radius: 50%;
+          cursor: pointer; }
+        .landing header .rightnav__profile p {
+          cursor: pointer; }
   .landing main {
     display: flex; }
+    @media (max-width: 1200px) {
+      .landing main {
+        flex-direction: column; } }
     .landing main .menu {
-      width: 100%;
+      width: 100vw;
       background-color: #333;
-      color: white; }
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      @media (max-width: 1200px) {
+        .landing main .menu {
+          height: 5rem; } }
       .landing main .menu__bar {
         display: flex;
         flex-direction: column;
+        align-items: center;
         padding-top: 10%; }
+        @media (max-width: 1200px) {
+          .landing main .menu__bar {
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            width: 100%;
+            height: 100%; } }
         .landing main .menu__bar--child {
           display: flex;
           gap: 5%;
-          padding: 5% 10%; }
+          padding: 5% 10%;
+          cursor: pointer; }
           .landing main .menu__bar--child:hover {
             background-color: #ff3366; }
+          @media (max-width: 1200px) {
+            .landing main .menu__bar--child {
+              width: 25%;
+              padding: 1.5%;
+              text-align: center; } }
       .landing main .menu .copyright {
-        padding: 10%;
+        padding: 5%;
         text-align: center; }
+        @media (max-width: 1200px) {
+          .landing main .menu .copyright {
+            display: none; } }
     .landing main .main__gallery {
       display: flex; }
       .landing main .main__gallery div img {
@@ -131,3 +167,92 @@ b {
           font-weight: 400; }
           .landing main .main__galDesc--right-grade p {
             font-size: 1rem; }
+    .landing main .main__content {
+      background-color: #f0f0f0;
+      padding: 5%;
+      display: flex;
+      gap: 3%; }
+      @media (max-width: 1200px) {
+        .landing main .main__content {
+          padding: 2%;
+          gap: 2%; } }
+      .landing main .main__content--left {
+        background-color: white;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; }
+        @media (max-width: 1200px) {
+          .landing main .main__content--left {
+            gap: 5rem; } }
+        .landing main .main__content--left-child1 {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem; }
+          .landing main .main__content--left-child1 p {
+            line-height: 1.5; }
+        .landing main .main__content--left-child2 {
+          display: flex;
+          gap: 10%;
+          line-height: 1.5;
+          padding: 5% 0;
+          border-top: 1px solid #999;
+          border-bottom: 1px solid #999; }
+        .landing main .main__content--left-child3 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .landing main .main__content--left-child3 p {
+            width: 100%; }
+          .landing main .main__content--left-child3-images {
+            display: flex;
+            margin-right: -40%; }
+            .landing main .main__content--left-child3-images img {
+              width: 13%;
+              border-radius: 50%;
+              border: 3px solid white;
+              margin-right: -5%; }
+      .landing main .main__content--right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        width: 140%; }
+        @media (max-width: 1200px) {
+          .landing main .main__content--right {
+            gap: 2rem; } }
+        .landing main .main__content--right-child {
+          padding: 10%;
+          background-color: white;
+          line-height: 1.5;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem; }
+          .landing main .main__content--right-child-author {
+            display: flex;
+            align-items: center;
+            gap: 5%; }
+            .landing main .main__content--right-child-author img {
+              width: 20%;
+              border-radius: 50%; }
+            .landing main .main__content--right-child-author div p {
+              font-size: 1rem; }
+            .landing main .main__content--right-child-author b {
+              margin-left: 30%; }
+        .landing main .main__content--right a {
+          color: #eb2f64; }
+    .landing main .main__foot {
+      background-color: white;
+      padding: 5%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem; }
+      .landing main .main__foot .btn {
+        background-image: linear-gradient(to right, #ff3366, #ba265d);
+        text-decoration: none;
+        color: white;
+        padding: 2% 5%;
+        border-radius: 30px;
+        width: 20rem; }
