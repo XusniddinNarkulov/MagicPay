@@ -15,10 +15,15 @@ Grey dark 2: #777
 Grey dark 3: #999
 
 */
+@font-face {
+  font-family: "openSans";
+  src: url(../fonts/OpenSans-VariableFont_wdth\wght.ttf); }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "openSans", sans-serif; }
 
 html {
   font-size: 62.5%; }
@@ -26,3 +31,103 @@ html {
 body {
   background-color: #eb2f64;
   font-size: 1.6rem; }
+
+b {
+  color: #eb2f64; }
+
+.landing {
+  margin: 5%;
+  background-color: #faf9f9; }
+  .landing header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%; }
+    .landing header .logo {
+      width: 3rem;
+      height: 3rem; }
+    .landing header .search-box {
+      display: flex;
+      align-items: center; }
+      .landing header .search-box input {
+        padding: 2% 5%;
+        border-radius: 40px;
+        border: 0;
+        background-color: #ccc;
+        opacity: 0.7;
+        width: 30rem; }
+      .landing header .search-box ion-icon {
+        margin-left: -10%; }
+    .landing header .rightnav {
+      display: flex;
+      align-items: center;
+      gap: 20%; }
+      .landing header .rightnav ion-icon {
+        font-size: 3rem; }
+      .landing header .rightnav__profile {
+        display: flex;
+        align-items: center;
+        gap: 5%; }
+        .landing header .rightnav__profile img {
+          width: 40%;
+          border-radius: 50%; }
+  .landing main {
+    display: flex; }
+    .landing main .menu {
+      width: 100%;
+      background-color: #333;
+      color: white; }
+      .landing main .menu__bar {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%; }
+        .landing main .menu__bar--child {
+          display: flex;
+          gap: 5%;
+          padding: 5% 10%; }
+          .landing main .menu__bar--child:hover {
+            background-color: #ff3366; }
+      .landing main .menu .copyright {
+        padding: 10%;
+        text-align: center; }
+    .landing main .main__gallery {
+      display: flex; }
+      .landing main .main__gallery div img {
+        width: 100%; }
+    .landing main .main__galDesc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: -0.7%; }
+      .landing main .main__galDesc--left {
+        display: flex;
+        align-items: center;
+        margin-left: 3%;
+        gap: 3rem; }
+        .landing main .main__galDesc--left h2 {
+          color: #777;
+          font-weight: 400; }
+        .landing main .main__galDesc--left p {
+          font-size: 2.5rem;
+          color: #eb2f64; }
+      .landing main .main__galDesc--right {
+        display: flex;
+        align-items: center; }
+        .landing main .main__galDesc--right-location {
+          display: flex;
+          align-items: center;
+          gap: 3%;
+          color: #eb2f64;
+          margin-right: 10%; }
+          .landing main .main__galDesc--right-location a {
+            color: #eb2f64;
+            flex-shrink: 0; }
+          .landing main .main__galDesc--right-location ion-icon {
+            font-size: 7rem; }
+        .landing main .main__galDesc--right-grade {
+          padding: 4%;
+          text-align: center;
+          background-color: #ff3366;
+          color: white;
+          font-weight: 400; }
+          .landing main .main__galDesc--right-grade p {
+            font-size: 1rem; }

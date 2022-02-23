@@ -25,10 +25,16 @@ $Greylight2: #f4f2f2;
 $Greylight3: #f0eeee;
 $Greylight4: #ccc;
 
+@font-face {
+  font-family: "openSans";
+  src: url(../fonts/OpenSans-VariableFont_wdth\wght.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "openSans", sans-serif;
 }
 html {
   font-size: 62.5%;
@@ -36,4 +42,160 @@ html {
 body {
   background-color: $Primary;
   font-size: 1.6rem;
+}
+
+b {
+  color: $Primary;
+}
+
+.landing {
+  margin: 5%;
+  background-color: $Greylight1;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+
+    .logo {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      input {
+        padding: 2% 5%;
+        border-radius: 40px;
+        border: 0;
+        background-color: $Greylight4;
+        opacity: 0.7;
+        width: 30rem;
+      }
+      ion-icon {
+        margin-left: -10%;
+      }
+    }
+
+    .rightnav {
+      display: flex;
+      align-items: center;
+      gap: 20%;
+
+      ion-icon {
+        font-size: 3rem;
+      }
+
+      &__profile {
+        display: flex;
+        align-items: center;
+        gap: 5%;
+
+        img {
+          width: 40%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  main {
+    display: flex;
+
+    .menu {
+      width: 100%;
+      background-color: #333;
+      color: white;
+
+      &__bar {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+
+        &--child {
+          display: flex;
+          gap: 5%;
+          padding: 5% 10%;
+
+          &:hover {
+            background-color: $Primarylight;
+          }
+        }
+      }
+
+      .copyright {
+        padding: 10%;
+        text-align: center;
+      }
+    }
+
+    .main {
+      &__gallery {
+        display: flex;
+        div {
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      &__galDesc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -0.7%;
+
+        &--left {
+          display: flex;
+          align-items: center;
+          margin-left: 3%;
+          gap: 3rem;
+
+          h2 {
+            color: #777;
+            font-weight: 400;
+          }
+
+          p {
+            font-size: 2.5rem;
+            color: $Primary;
+          }
+        }
+
+        &--right {
+          display: flex;
+          align-items: center;
+
+          &-location {
+            display: flex;
+            align-items: center;
+            gap: 3%;
+            color: $Primary;
+            margin-right: 10%;
+
+            a {
+              color: $Primary;
+              flex-shrink: 0;
+            }
+            ion-icon {
+              font-size: 7rem;
+            }
+          }
+
+          &-grade {
+            padding: 4%;
+            text-align: center;
+            background-color: $Primarylight;
+            color: white;
+            font-weight: 400;
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
